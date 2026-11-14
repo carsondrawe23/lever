@@ -1,0 +1,16 @@
+name: Rename lever to index
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          git config user.name "carsondrawe23"
+          git config user.email "carsondrawe23@gmail.com"
+          git mv lever.html index.html
+          git commit -m "Rename lever.html to index.html"
+          git push
