@@ -11,6 +11,8 @@ jobs:
       - run: |
           git config user.name "carsondrawe23"
           git config user.email "carsondrawe23@gmail.com"
-          git mv lever.html index.html
-          git commit -m "Rename lever.html to index.html"
+          rm -f index.html
+          mv lever.html index.html
+          git add -A
+          git commit -m "Replace index.html with updated lever.html"
           git push
